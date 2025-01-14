@@ -16,3 +16,9 @@ class CircleShape(pygame.sprite.Sprite):
 
     def update(self, dt):
         pass
+
+    def dose_cross(self, circle):
+        dist = self.position.distance_to(circle.position)
+        if dist <= (self.radius + circle.radius):
+            return True
+        return False
